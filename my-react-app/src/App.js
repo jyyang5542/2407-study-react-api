@@ -11,7 +11,7 @@ const App = () => {
     <Router>
       <div className="app">
         <header className="header">
-          <h1>BSTONES - React.js 템플릿</h1>
+          <h1>React.js 템플릿</h1>
           <nav>
             <Link to="/guide">Guide</Link>
             <Link to="/">Main</Link>
