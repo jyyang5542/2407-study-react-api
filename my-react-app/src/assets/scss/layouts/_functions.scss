@@ -1,0 +1,9 @@
+// 모바일 VW 변환
+@function vw-mo($val, $device-width: 1400px) {
+  @return calc(($val * 100vw) / $device-width);
+}
+
+// PC VW 변환
+@function vw-pc($val, $device-width: 1920px) {
+  @return calc(($val * 100vw) / $device-width);
+}

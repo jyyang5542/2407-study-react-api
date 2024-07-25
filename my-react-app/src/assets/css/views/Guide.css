@@ -1,0 +1,40 @@
+.guide .container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.guide h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #343a40;
+}
+.guide table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.guide table th,
+.guide table td {
+  padding: 5px 10px;
+}
+.guide table th:nth-of-type(1), .guide table th:nth-of-type(2), .guide table th:nth-of-type(3), .guide table th:nth-of-type(4), .guide table th:nth-of-type(5),
+.guide table td:nth-of-type(1),
+.guide table td:nth-of-type(2),
+.guide table td:nth-of-type(3),
+.guide table td:nth-of-type(4),
+.guide table td:nth-of-type(5) {
+  width: 12%;
+}
+.guide table th {
+  background: #111;
+  color: #fff;
+}
+.guide table td {
+  border-bottom: 1px solid #eee;
+}
+.guide table td:nth-of-type(6), .guide table td:nth-of-type(7), .guide table td:nth-of-type(8), .guide table td:nth-of-type(9), .guide table td:nth-of-type(10) {
+  text-align: center;
+}
+
+/*# sourceMappingURL=Guide.css.map */

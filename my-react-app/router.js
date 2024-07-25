@@ -5,10 +5,12 @@ const jsonServer = require('json-server');
 const server = jsonServer.create();
 const middlewares = jsonServer.defaults();
 
+const guide = JSON.parse(fs.readFileSync(path.join(__dirname, 'src/assets/data/guide.json')));
 const dataOne = JSON.parse(fs.readFileSync(path.join(__dirname, 'src/assets/data/data_one.json')));
 const dataTwo = JSON.parse(fs.readFileSync(path.join(__dirname, 'src/assets/data/data_two.json')));
 
 const router = jsonServer.router({
+  guide: guide,
   data_one: dataOne,
   data_two: dataTwo,
 });

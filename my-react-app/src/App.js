@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Main from './views/Main';
+import Guide from './views/Guide';
 import DataOne from './views/DataOne';
 import DataTwo from './views/DataTwo';
 import './assets/css/styles.css';
@@ -12,6 +13,7 @@ const App = () => {
         <header className="header">
           <h1>BSTONES - React.js 템플릿</h1>
           <nav>
+            <Link to="/guide">Guide</Link>
             <Link to="/">Main</Link>
             <Link to="/data">Data</Link>
           </nav>
@@ -24,6 +26,15 @@ const App = () => {
               element={
                 <>
                   <Main />
+                </>
+              }
+            />
+            <Route
+              exact
+              path="/guide"
+              element={
+                <>
+                  <Guide />
                 </>
               }
             />

@@ -1,0 +1,7 @@
+{
+  "title": "퍼블리싱 가이드",
+  "items": [
+    { "id": 0, "dep1": "메인", "dep2": "", "dep3": "", "dep4": "", "dep5": "", "href": "/", "fileName": "Main.js", "status": "완료", "developer": "홍길동", "date": "2024-01-01" },
+    { "id": 1, "dep1": "데이터바인딩 샘플", "dep2": "", "dep3": "", "dep4": "", "dep5": "", "href": "/data", "fileName": "", "status": "미완료", "developer": "홍길동", "date": "2024-01-01" }
+  ]
+}
