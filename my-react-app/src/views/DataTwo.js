@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Typography, List, ListItem, ListItemText, Paper } from '@mui/material';
+import '../assets/css/views/DataTwo.css';
 
 const DataTwo = () => {
   const [dataTwo, setDataTwo] = useState({ title: '', items: [] });
@@ -12,18 +12,18 @@ const DataTwo = () => {
   }, []);
 
   return (
-    <Container component={Paper} sx={{ padding: '20px', marginTop: '20px', backgroundColor: '#e8f5e9' }}>
-      <Typography variant="h4" component="h2" gutterBottom sx={{ color: '#2e7d32' }}>
-        {dataTwo.title}
-      </Typography>
-      <List>
-        {dataTwo.items.map(item => (
-          <ListItem key={item.id} divider sx={{ backgroundColor: '#ffffff', borderRadius: '5px', marginBottom: '5px' }}>
-            <ListItemText primary={<strong>{item.name}</strong>} secondary={item.description} />
-          </ListItem>
-        ))}
-      </List>
-    </Container>
+    <section className="data-two">
+      <div className="container">
+        <h2>{dataTwo.title}</h2>
+        <ul>
+          {dataTwo.items.map(item => (
+            <li key={item.id}>
+              <strong>{item.name}</strong>: {item.description}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 };
 

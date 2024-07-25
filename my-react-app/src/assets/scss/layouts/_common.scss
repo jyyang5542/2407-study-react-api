@@ -1,0 +1,22 @@
+// 샘플 코드
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  .header {
+    h1 {
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+}

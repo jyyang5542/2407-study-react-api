@@ -1,0 +1,32 @@
+.data-two .container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.data-two h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #343a40;
+}
+.data-two ul {
+  list-style: none;
+  padding: 0;
+}
+.data-two li {
+  background: #e9ecef;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.data-two li strong {
+  color: #495057;
+}
+.data-two .description {
+  color: #868e96;
+}
+
+/*# sourceMappingURL=DataTwo.css.map */

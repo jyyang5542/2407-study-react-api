@@ -1,42 +1,11 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
-}
+@charset "utf-8";
 
-.container {
-  width: 80%;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+// Import Layouts
+@import './layouts/variables';
+@import './layouts/mixin';
+@import './layouts/functions';
+@import './layouts/reset';
+@import './layouts/common';
 
-h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #343a40;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background: #e9ecef;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-}
-
-li strong {
-  color: #495057;
-}
-
-.description {
-  color: #868e96;
-}
+// Import Components
+@import './components/ComponentName.scss';
