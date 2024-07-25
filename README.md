@@ -30,23 +30,33 @@ my-react-app/
 
 ### 2-1. 리포지토리 클론
 ```
-git clone <repository-url>
+git clone https://github.com/jyyang5542/2407-study-react-api
 cd my-react-app
 ```
 
 ### 2-2. 종속성 설치
 ```
 npm install
-npm install @mui/material @emotion/react @emotion/styled
 ```
 
 ### 2-3. .env 파일 생성 및 설정
 ```
+REACT_APP_API_URL_GUIDE=http://localhost:5000/guide
 REACT_APP_API_URL_ONE=http://localhost:5000/data_one
 REACT_APP_API_URL_TWO=http://localhost:5000/data_two
 ```
 
 ### 2-4. src/assets/data 디렉토리에 다음 JSON 파일들이 있는지 확인
+**guide.json**
+```
+{
+  "title": "퍼블리싱 가이드",
+  "items": [
+    { "id": 0, "dep1": "메인", "dep2": "", "dep3": "", "dep4": "", "dep5": "", "href": "/", "fileName": "Main.js", "status": "완료", "developer": "홍길동", "date": "2024-01-01" },
+    { "id": 1, "dep1": "데이터바인딩 샘플", "dep2": "", "dep3": "", "dep4": "", "dep5": "", "href": "/data", "fileName": "", "status": "미완료", "developer": "홍길동", "date": "2024-01-01" }
+  ]
+}
+```
 **data_one.json**
 ```
 {
@@ -76,12 +86,14 @@ const jsonServer = require('json-server');
 const server = jsonServer.create();
 const middlewares = jsonServer.defaults();
 
+const guide = JSON.parse(fs.readFileSync(path.join(__dirname, 'src/assets/data/guide.json')));
 const dataOne = JSON.parse(fs.readFileSync(path.join(__dirname, 'src/assets/data/data_one.json')));
 const dataTwo = JSON.parse(fs.readFileSync(path.join(__dirname, 'src/assets/data/data_two.json')));
 
 const router = jsonServer.router({
+  guide: guide,
   data_one: dataOne,
-  data_two: dataTwo
+  data_two: dataTwo,
 });
 
 server.use(middlewares);
@@ -105,11 +117,13 @@ npm run start
     + http://localhost:5000/data_two
 
 ## 4. 프로젝트 개요
-이 프로젝트는 다음과 같은 기능을 시연합니다:
-- 여러 JSON 파일에서 데이터를 가져와 표시하는 React 컴포넌트.
-- SCSS를 사용한 스타일링.
-- JSON 서버를 사용한 목 데이터 제공.
-- React 개발 서버와 JSON 서버를 동시에 실행.
+리액트 서버가 실행되면 메뉴가 3개 있습니다.
+
+**Main**은 일반적으로 퍼블리싱할 때 사용할 수 있는 빈 요소 예제,
+
+**Data**는 데이터 바인딩과 컴포넌트를 사용한 예제,
+
+**Guide**는 데이터 바인딩을 활용한 퍼블리싱 가이드입니다.
 
 ## 5. 파일 설명
 - `src/assets/data/`: 목 데이터로 사용되는 JSON 파일들을 포함합니다.
@@ -123,5 +137,5 @@ npm run start
 - 프로젝트를 실행하기 전에 모든 종속성이 설치되었는지 확인하세요.
 - JSON 서버는 5000번 포트에서 실행되도록 설정되어 있습니다. 이 포트가 사용 중인 경우, `router.js`와 `.env` 파일에서 포트를 변경하세요.
 
-## 6. 라이센스
+## 7. 라이센스
 이 프로젝트는 MIT 라이센스에 따라 라이센스가 부여됩니다.
