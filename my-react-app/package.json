@@ -6,7 +6,10 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.2",
     "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
@@ -20,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/assets/scss:src/assets/css",
-    "dev": "concurrently \"react-scripts --openssl-legacy-provider start\" \"npm run json-server\"",
+    "dev": "concurrently \"react-scripts --openssl-legacy-provider start\" \"npm run json-server\" \"node server.js\"",
     "json-server": "node router.js"
   },
   "eslintConfig": {

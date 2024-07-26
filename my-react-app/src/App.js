@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Main from './views/Main';
-import Guide from './views/Guide';
 import DataOne from './views/DataOne';
 import DataTwo from './views/DataTwo';
+import Axios from './views/Axios';
+import Guide from './views/Guide';
 import './assets/css/styles.css';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
           <nav>
             <Link to="/">Main</Link>
             <Link to="/data">Data</Link>
+            <Link to="/axios">Axios</Link>
             <Link to="/guide">Guide</Link>
           </nav>
         </header>
@@ -31,19 +33,29 @@ const App = () => {
             />
             <Route
               exact
-              path="/guide"
-              element={
-                <>
-                  <Guide />
-                </>
-              }
-            />
-            <Route
               path="/data"
               element={
                 <>
                   <DataOne />
                   <DataTwo />
+                </>
+              }
+            />
+            <Route
+              exact
+              path="/axios"
+              element={
+                <>
+                  <Axios />
+                </>
+              }
+            />
+            <Route
+              exact
+              path="/guide"
+              element={
+                <>
+                  <Guide />
                 </>
               }
             />
