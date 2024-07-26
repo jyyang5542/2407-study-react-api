@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const cors = require('cors'); // cors 모듈 가져오기
 const app = express();

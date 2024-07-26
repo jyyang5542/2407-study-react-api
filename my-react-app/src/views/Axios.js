@@ -1,6 +1,5 @@
-// src/Axios.js
 import React, { useEffect, useState } from 'react';
-import axios from '../api/axios'; // 위에서 만든 axios 인스턴스를 가져옵니다.
+import axios from '../api/axios'; // axios 인스턴스를 가져옵니다.
 import '../assets/css/views/Axios.css';
 
 function Axios() {
